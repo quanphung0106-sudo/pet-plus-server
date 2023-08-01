@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'MSG_4000' => 'Yêu cầu không hợp lệ',
+    'MSG_4010' => 'Xác thực thất bại',
+    'MSG_4011' => 'Token đã hết hạn',
+    'MSG_4012' => 'Token không đúng',
+    'MSG_4013' => 'Token đã được sử dụng',
+    'MSG_4030' => 'Chưa xác thực',
+    'MSG_4031' => 'Truy cập bị từ chối',
+    'MSG_4032' => 'Blocked',
+    'MSG_4033' => 'Dữ liệu trùng lặp',
+    'MSG_4040' => 'Không có tài khoản',
+    'MSG_4041' => 'Không có dữ liệu',
+    'MSG_4042' => 'Chưa đăng nhập',
+    'MSG_4050' => 'Phương thức HTTP không hợp lệ',
+    'MSG_4090' => 'Quá trình này đã được thực hiện',
+    'MSG_4091' => 'Không thể đăng ký tài khoản',
+    'MSG_4230' => 'Một người dùng khác đang hoạt động',
+    'MSG_5000' => 'Lỗi hệ thống',
+    'MSG_5001' => 'Lỗi không mong đợi',
+    'MSG_5002' => 'Lỗi cơ sở dữ liệu',
+    'MSG_5003' => 'Đăng ký không thành công',
+    'MSG_5004' => 'Cập nhật không thành công',
+    'MSG_5005' => 'Xóa không thành công',
+    'MSG_5006' => 'Tạo không thành công',
+];

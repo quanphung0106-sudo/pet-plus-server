@@ -1,0 +1,42 @@
+version: '3.5'
+
+services:
+  pet-plus:
+    build:
+      context: '.'
+      args:
+        uid: ${UID}
+    container_name: pet-plus
+    restart: unless-stopped
+    environment:
+      - APACHE_RUN_USER=#${UID}
+      - APACHE_RUN_GROUP=#${UID}
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 8080:80
+    networks:
+      - pet-plus-network
+  pet-plus-db:
+    image: mysql:8.0.32
+    container_name: pet-plus-db
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=pet-plus
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=123456
+    networks:
+      - pet-plus-network
+
+networks:
+  pet-plus-network:
+    driver: bridge
+
+volumes:
+  dbdata:
+    driver: local
